@@ -1,0 +1,58 @@
+/*=== Aplicando CSS Global===*/
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html{
+  scroll-behavior: smooth;
+}
+body {
+  font-size: 16px;
+  background-color: #EFF5F5;
+}
+
+.nav-link {
+  font-weight: 600;
+}
+
+.text-justify {
+  text-align: justify;
+}
+
+.card:hover {
+  opacity: 0.7;
+}
+
+.card-text {
+  text-align: justify;
+}
+/* este código lo voy a dejar para cuando haga la pagina de contacto para el textarea  para que no se redimensione manualmente*/
+#txtComment {
+  resize: none;
+} 
+
+.color-untref{
+  color: #FC7300;
+}
+
+p{
+  color: #181823;
+}
+
+h2{
+  color:  #00425A;
+}
+
+.color-h5{
+  color:  #00425A;
+}
+.contacto-color{
+  color: #1F8A70;
+}
+
+@media (max-width: 576px) {
+  .card-text {
+      font-size: 0.8rem;
+  }
+}

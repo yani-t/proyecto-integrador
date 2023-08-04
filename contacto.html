@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Mi primer sitio web como proyecto de Argentina Programa"
+    />
+    <meta name="keywords" content="UntrefSchool" />
+    <meta name="author" content="Tejerina Yanina Natalia" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+    <link rel="icon" type="image/x-icon" href="./img/logo.png">
+    <!-- el css externo propio va antes que la etiqueta title y la etiqueta <title>UntrefSchool</title> siempre va al final del head-->
+    <link rel="stylesheet" href="./css/estilos.css" />
+    <title>UntrefSchool</title>
+    <!-- Este texto es un fragmento de código HTML que se utiliza en la sección `<head>` de una página web. 
+
+- `<meta charset="UTF-8">`: define la codificación de caracteres utilizada en la página como UTF-8.
+- `<meta name="description" content="Free Web tutorials">`: proporciona una breve descripción de la página para los motores de búsqueda y otros servicios.
+- `<meta name="keywords" content="HTML, CSS, JavaScript">`: especifica las palabras clave que describen el contenido de la página.
+- `<meta name="author" content="John Doe">`: indica el nombre del autor de la página.
+- `<meta name="viewport" content="width=device-width, initial-scale=1.0">`: establece la escala inicial y el tamaño de la ventana gráfica para dispositivos móviles. -->
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="container">
+      <div class="container-fluid">
+        <a
+          class="navbar-brand color-untref"
+          href="https://untref.edu.ar/"
+          target="_blank"
+          >UntrefSchool</a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a
+                class="nav-link contacto-color"
+                href="./index.html"
+                target="_blank"
+                >Página Principal</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="container my-5">
+      <div class="container">
+        <form action="https://formsubmit.co/yanitejerina1@gmail.com" method="post" class="row g-3 needs-validation" novalidate>
+          <div class="col-md-4">
+            <label for="validationCustom01" class="form-label">Nombre</label>
+            <input
+              type="text"
+              class="form-control"
+              id="validationCustom01"
+              value="Juan Diego"
+              required
+            />
+            <div class="valid-feedback">¡Se ve bien!</div>
+          </div>
+          <div class="col-md-4">
+            <label for="validationCustom02" class="form-label">Apellido</label>
+            <input
+              type="text"
+              class="form-control"
+              id="validationCustom02"
+              value="Aguirrez"
+              required
+            />
+            <div class="valid-feedback">¡Se ve bien!</div>
+          </div>
+          <div class="col-md-6">
+            <label for="validationCustom03" class="form-label">Ciudad</label>
+            <input
+              type="text"
+              class="form-control"
+              id="validationCustom03"
+              required
+            />
+            <div class="invalid-feedback">Proporciona una ciudad válida.</div>
+          </div>
+          <div class="col-md-3">
+            <label for="validationCustom05" class="form-label"
+              >Código postal</label
+            >
+            <input
+              type="text"
+              class="form-control"
+              id="validationCustom05"
+              required
+            />
+            <div class="invalid-feedback">
+              Proporciona un código postal válido.
+            </div>
+          </div>
+          <div class="col-12">
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                value=""
+                id="invalidCheck"
+                required
+              />
+              <label class="form-check-label" for="invalidCheck">
+                Acepta los términos y condiciones
+              </label>
+              <div class="invalid-feedback">
+                Debe estar de acuerdo antes de enviar.
+              </div>
+            </div>
+          </div>
+          <div class="col-12">
+            <button class="btn btn-primary" type="submit">
+              Enviar formulario
+            </button>
+          </div>
+        </form>
+      </div>
+      <div class="container my-5">
+        <footer>
+          <p class="text-center text-muted">© UntrefSchool</p>
+        </footer>
+      </div>
+    </div>
+    <script>
+      // Ejemplo de JavaScript inicial para deshabilitar el envío de formularios si hay campos no válidos
+      (function () {
+        "use strict";
+
+        // Obtener todos los formularios a los que queremos aplicar estilos de validación de Bootstrap personalizados
+        var forms = document.querySelectorAll(".needs-validation");
+
+        // Bucle sobre ellos y evitar el envío
+        Array.prototype.slice.call(forms).forEach(function (form) {
+          form.addEventListener(
+            "submit",
+            function (event) {
+              if (!form.checkValidity()) {
+                event.preventDefault();
+                event.stopPropagation();
+              }
+
+              form.classList.add("was-validated");
+            },
+            false
+          );
+        });
+      })();
+    </script>
+    <!-- script de fontawesome para todos los iconos tambien se añade al final del body-->
+    <script
+      src="https://kit.fontawesome.com/ad3ccd82b1.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- el script va al final del body -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
